@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/dsa_lab
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+#    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: none  # No table creation for now refer resources/dsa_lab_schema.sql
+    show-sql: true
+    properties:
+      hibernate:
+        default-schema: dsa_lab
+    open-in-view: false
+
+server:
+  port: 8080
